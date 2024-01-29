@@ -1,0 +1,25 @@
+services:
+    pg-database_compose:
+      image: postgres:15
+      environment:
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=ny_taxi
+      volumes:
+        - "${HOME}/nytaxi_postgresdb:/var/lib/postgresql/data"
+      networks:
+        - dezoomcamp
+      ports:
+        - "5433:5432"
+    pgadmin_compose:
+      image: dpage/pgadmin4
+      environment:
+        - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+        - PGADMIN_DEFAULT_PASSWORD=root
+      networks:
+        - dezoomcamp
+      ports:
+        - "9023:80"
+networks:
+  dezoomcamp:
+    name: newnetwork

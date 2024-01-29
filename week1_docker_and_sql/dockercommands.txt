@@ -1,0 +1,11 @@
+  docker run -it \
+   --network=newnetwork \
+   --name firstingest \
+   data_ingest:v1 \
+   --username root \
+   --host pg-database_compose \
+   --port 5432 \
+   --database ny_taxi \
+   --password root \
+   --url https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet \
+   --tablename yellowtaxi_data
