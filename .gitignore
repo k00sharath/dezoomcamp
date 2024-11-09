@@ -1,0 +1,9 @@
+*/*postgres*
+*/config
+*/logs
+*/plugins
+*/*state*
+*/dags
+*/*terraform*
+*/.terraform
+*env*

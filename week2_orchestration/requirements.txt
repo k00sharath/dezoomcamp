@@ -1,0 +1,7 @@
+boto3
+apache-airflow-providers-amazon
+pandas
+sqlalchemy
+psycopg2-binary
+pyarrow
+s3fs
