@@ -14,6 +14,6 @@ provider "aws" {
 
 resource "aws_s3_bucket" "dezoomcampbucket"{
 
-bucket = "debucketnew1"
+bucket = ""
 
 }
